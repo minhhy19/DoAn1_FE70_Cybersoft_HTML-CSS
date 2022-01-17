@@ -1,0 +1,38 @@
+.banner {
+  padding-left:  30px;
+  padding-right: 30px;
+  &__container {
+    padding: 90px;
+    background-image: url("../images/home/bg-signup-1400-x2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .banner__content {
+      .section-title {
+        max-width: 650px;
+        font-size: 3rem;
+        padding-bottom: 40px;
+
+        @include Responsive(lg-carousel) {
+          font-size: 40px;
+          max-width: 750px;
+        }
+
+        @include Responsive(md-index) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    @include Responsive(lg-carousel) {
+      background-image: none;
+      background-color: #4d1325;
+      padding: 64px 32px;
+    }
+
+    @include Responsive(md-index) {
+      padding: 48px 24px;
+    }
+  }
+}

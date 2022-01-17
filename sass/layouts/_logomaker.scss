@@ -1,0 +1,109 @@
+.logomaker {
+  padding-left: 30px;
+  padding-right: 30px;
+  &__container {
+    background-color: #4a73e8;
+    color: #fff;
+
+    .logomaker__content {
+      padding: 36px 0 36px 32px;
+      padding-left: 76px;
+      position: relative;
+      z-index: 2;
+      &-logo {
+        margin-bottom: 10px;
+        svg {
+          width: 188px;
+          height: 26px;
+        }
+      }
+
+      .section-title {
+        max-width: 450px;
+      }
+
+      .section-p {
+        color: white;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-bottom: 24px;
+      }
+
+      button {
+        color: #4a73e8;
+        background-color: white;
+
+        &:hover {
+          background-color: #d4defb;
+        }
+      }
+
+      &-img {
+        .logomaker-default {
+          display: block;
+          height: 100%;
+          width: 100%;
+          margin-top: -25%;
+          position: relative;
+          z-index: 1;
+        }
+
+        .logomaker-tablet {
+          display: none;
+        }
+        .logomaker-mobile {
+          display: none;
+        }
+
+        img {
+          object-fit: cover;
+        }
+
+        @include Responsive(lg-carousel) {
+          .logomaker-default {
+            display: none;
+          }
+
+          .logomaker-tablet {
+            display: block;
+            height: 100%;
+            width: 100%;
+            margin-top: -27%;
+            position: relative;
+            z-index: 1;
+          }
+        }
+
+        @include Responsive(sm) {
+          .logomaker-default {
+            display: none;
+          }
+
+          .logomaker-tablet {
+            display: none;
+          }
+
+          .logomaker-mobile {
+            display: block;
+            height: 100%;
+            width: 100%;
+            margin-top: -27%;
+            position: relative;
+            z-index: 1;
+          }
+        }
+      }
+
+      @include Responsive(md) {
+        padding: 15px;
+      }
+    }
+  }
+
+  @include Responsive(md-index) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
